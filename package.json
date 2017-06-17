@@ -1,0 +1,42 @@
+{
+  "name": "react-app-rewire-styled-components",
+  "version": "1.0.0",
+  "description": "A plugin to add the styled-components Babel plugin to create-react-app with react-app-rewired",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/withspectrum/react-app-rewire-styled-components.git"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --ignore '*.test.js'",
+    "test": "jest src",
+    "prettier": "prettier --write --single-quote --trailing-comma es5 'src/**/*.js'",
+    "flow": "flow src"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --trailing-comma es5",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.4"
+  },
+  "peerDependencies": {
+    "styled-components": "2.x"
+  },
+  "devDependencies": {
+    "babel-cli": "6.x.x",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.45.0",
+    "husky": "^0.13.3",
+    "jest": "19.x.x",
+    "lint-staged": "^3.4.1",
+    "prettier": "^1.3.1",
+    "rimraf": "^2.6.1"
+  }
+}
