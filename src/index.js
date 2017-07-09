@@ -1,12 +1,15 @@
-const babelLoader = function(conf) {
-  return conf.loader === 'babel';
-};
-
-function rewireStyledComponents(config) {
-  const babelrc = config.module.loaders.find(babelLoader).query;
-  babelrc.plugins = ['styled-components'].concat(babelrc.plugins || []);
+function rewireStyledComponents(
+  config,
+  env,
+  styledComponentsPluginOptions = {}
+) {
+  const babelLoader = config.module.rules.find(
+    rule => rule.loader && rule.loader.indexOf('babel-loader') > 0
+  );
+  babelLoader.options.plugins = (babelLoader.options.plugins || [])
+    .concat([['styled-components', styledComponentsPluginOptions]]);
 
   return config;
 }
 
-export default rewireStyledComponents;
+module.exports = rewireStyledComponents;
