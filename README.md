@@ -28,6 +28,16 @@ module.exports = function override(config, env) {
 
 That's it, you're now using the `styled-components` Babel plugin!
 
+To pass options to the Babel plugin use the third argument, it passes straight through to the plugin:
+
+```JS
+config = rewireStyledComponents(config, env, {
+  ssr: true,
+})
+```
+
+See [the available options](https://www.styled-components.com/docs/tooling#babel-plugin) in the `styled-components` documentation.
+
 ## License
 
 Licensed under the MIT License, Copyright ©️ 2017 Maximilian Stoiber. See [LICENSE.md](LICENSE.md) for more information.
