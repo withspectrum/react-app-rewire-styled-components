@@ -27,7 +27,7 @@
     "react-app-rewired": "^1.2.0"
   },
   "peerDependencies": {
-    "styled-components": "2.x"
+    "styled-components": "2.x || 3.x"
   },
   "devDependencies": {
     "babel-cli": "6.x.x",
