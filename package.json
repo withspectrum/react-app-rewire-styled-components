@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.1.4",
-    "react-app-rewired": "^1.2.0"
+    "react-app-rewired": "^1.5.2"
   },
   "peerDependencies": {
     "styled-components": "2.x || 3.x"
