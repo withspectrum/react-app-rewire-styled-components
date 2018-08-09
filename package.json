@@ -34,7 +34,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.45.0",
-    "husky": "^0.13.3",
+    "husky": "^0.13.4",
     "jest": "19.x.x",
     "lint-staged": "^3.4.1",
     "prettier": "^1.3.1",
