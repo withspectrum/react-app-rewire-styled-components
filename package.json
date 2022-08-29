@@ -4,7 +4,7 @@
   "description": "A plugin to add the styled-components Babel plugin to create-react-app with react-app-rewired",
   "repository": {
     "type": "git",
-    "url": "https://github.com/withspectrum/react-app-rewire-styled-components.git"
+    "url": "https://github.com/vkosar/react-app-rewire-styled-components.git"
   },
   "main": "dist/index.js",
   "license": "MIT",
